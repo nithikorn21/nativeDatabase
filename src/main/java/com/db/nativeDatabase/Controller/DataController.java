@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.db.nativeDatabase.Entity.Book;
 import com.db.nativeDatabase.Repository.BookRepository;
+import com.db.nativeDatabase.Resolver.BookResolver;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,13 +22,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class DataController {
 
     private final BookRepository data;
+    private final BookResolver bookql;
 
-    public DataController(BookRepository data) {
+    public DataController(BookRepository data, BookResolver bookql) {
         this.data = data;
+        this.bookql = bookql;
     }
     
    @GetMapping("/findAllData")
-   public List<Book> getMethodName() {
+   public List<Book> findAllData() {
        return data.findAll();
    }
    
@@ -37,8 +41,13 @@ public class DataController {
 //    }
 
     @PostMapping("/findDataID")
-    public Optional<Book> postMethodName(@RequestParam long id) {
+    public Optional<Book> findDataID(@RequestParam long id) {
         return data.findById(id);
+    }
+
+    @PostMapping("/findDataIDQL")
+    public Book findDataIDQL(@RequestParam long id) {
+        return bookql.getBookById(id);
     }
 
    
