@@ -1,8 +1,8 @@
-package com.db.nativeDatabase.Repository;
+// package com.db.nativeDatabase.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.db.nativeDatabase.Entity.Book;
+// import com.db.nativeDatabase.Entity.Book;
 
-public interface BookRepository extends JpaRepository<Book, Long> {
-}
+// public interface BookRepository extends JpaRepository<Book, Long> {
+// }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.nativeDatabase.mapper.BookMapper">
+
+    <!-- Select Book by ID -->
+    <select id="selectID" parameterType="int" resultType="com.db.nativeDatabase.Entity.Book">
+        SELECT * FROM book WHERE id = #{id}
+    </select>
+
+    <!-- Insert Book -->
+    <insert id="insertBook" parameterType="com.db.nativeDatabase.Entity.Book">
+        INSERT INTO book (title, author)
+        VALUES (#{title}, #{author})
+    </insert>
+
+    <!-- Update Book -->
+    <update id="updateBook" parameterType="com.db.nativeDatabase.Entity.Book">
+        UPDATE book
+        SET title = #{title}, author = #{author}
+        WHERE id = #{id}
+    </update>
+
+    <!-- Delete Book by ID -->
+    <delete id="deleteBook" parameterType="int">
+        DELETE FROM book WHERE id = #{id}
+    </delete>
+
+</mapper>
