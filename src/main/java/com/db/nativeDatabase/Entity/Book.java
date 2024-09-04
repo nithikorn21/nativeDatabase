@@ -15,7 +15,7 @@ public class Book extends PanacheEntity{
     public String title;
     public String author;
 
-    // public static Book findByTitle(String title){
-    //     return find("title", title).firstResult();
-    // }
+    public static Book findByTitle(String title){
+        return find("title", title).firstResult();
+    }
 }

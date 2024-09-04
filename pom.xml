@@ -74,20 +74,20 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
-			<version>12.8.1.jre11</version>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-jdbc-postgresql</artifactId>
+			<version>3.14.1</version>
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-hibernate-orm-panache</artifactId>
 			<version>3.14.1</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-jdbc-mssql</artifactId>
 			<version>3.14.1</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>
