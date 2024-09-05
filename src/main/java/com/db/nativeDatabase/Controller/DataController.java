@@ -27,6 +27,7 @@ public class DataController {
     
    @GetMapping("/findAllData")
    public List<Book> getMethodName() {
+    int password = 12345678;
        return data.findAll();
    }
    
