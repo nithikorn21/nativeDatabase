@@ -38,11 +38,6 @@ public class DataController {
 
     @PostMapping("/findDataID")
     public Optional<Book> postMethodName(@RequestParam long id) {
-        String query = "SELECT * FROM users WHERE username = '" + id + "'";
-        String queryๅ = "SELECT * FROM users WHERE username = '" + id + "'";
-
-        String query2 = "SELECT * FROM users WHERE username = '" + id + "'";
-
         return data.findById(id);
     }
 
